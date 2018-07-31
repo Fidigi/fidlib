@@ -1,9 +1,9 @@
 <?php
 /**
- * FidLib V0.5.0 (alpha)
+ * FidLib V1.0.0
  * 	
  * 	LICENCE :
-  	Copyright 2011, 2013, 2014 Arnaud LAURENT 
+  	Copyright 2011, 2013, 2014, 2018 Arnaud LAURENT 
   	This file is part of FidLib.
 
     FidLib is free software: you can redistribute it and/or modify
@@ -21,12 +21,21 @@
  */
 
 define('FIDLIB_REP',realpath(dirname(__FILE__)));
-define('FIDLIB_VER','0.5.0');
+define('FIDLIB_VER','1.0.0');
 
-/**----- Core -----**/
+/**----- Require -----**/
 
-require("core/core.core.php");
+require("Fidlib/Tools/StringToolsCore.php");
+require("Fidlib/Tools/FileToolsCore.php");
+require("Fidlib/Tools/ArrayToolsCore.php");
+require("Fidlib/ObjectType/FidBase.php");
+require("Fidlib/ObjectType/FidObject.php");
+require("Fidlib/ObjectType/CollectionFidObjectManager.php");
+require("Fidlib/Core.php");
+require("Fidlib/AutoloadCore.php");
 
 /**----- Autoload -----**/
+
+use Fidlib\Core;
 
 Core::getInstance();
